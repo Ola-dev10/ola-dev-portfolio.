@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OLA DEV - Web Developer & Designer</title>
+  <link rel="icon" type="image/png" href="favicon.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+ 
+  <nav>
+    <div class="logo">
+    <a href="index.html" class="btn"><img src="favicon.jpg" alt="OLA DEV Logo"></a>
+     
+  </div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  
+
+
+  <section id="home" class="home-section">
+  <div class="home-content">
+    <div class="text-content">
+      <h1>Hi, I'm OLA DEV</h1>
+      <p>Web Designer & Developer / I build clean, responsive websites.</p>
+      <a href="#portfolio" class="btn">See my work</a>
+    </div>
+    <div class="image-content">
+      <img class="avatar" src="ola-avatar-circle-512.png" alt="OLA DEV avatar">
+    </div>
+  </div>
+</section>
+
+
+
+
+
+ <section id="about" class="section about-section">
+  <div class="container">
+    <h2>Creative Web Designer & Developer</h2>
+    <p>
+      I'm <strong>OLA DEV</strong>, a passionate and results-driven web designer and developer.
+      I specialize in creating responsive, user-friendly websites that combine visual appeal with
+      strong performance. Whether it's a personal portfolio, business site, or full web app / I bring ideas to life on the web.
+    </p>
+    <a href="#portfolio" class="btn">See my work</a>
+  </div>
+</section>
+
+
+
+<section id="services" style="padding: 60px 20px; background-color: white">
+  <div style="max-width: 1000px; margin: auto; text-align: center;">
+    <h2 style="font-size: 32px; margin-bottom: 10px;">What I Do</h2>
+    <p style="font-size: 18px; color: black">Here are the services I offer as a web designer and developer</p>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 40px; gap: 30px;">
+      
+    
+      <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px black; width: 280px;">
+        <h3 style="font-size: 22px; color: black;">Web Design</h3>
+        <p style="font-size: 16px; color: black">Modern, clean, and user-friendly interfaces tailored for your brand.</p>
+      </div>
+
+      
+      <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px black; width: 280px;">
+        <h3 style="font-size: 22px; color: black">Web Development</h3>
+        <p style="font-size: 16px; color: black">Functional, responsive websites built with clean HTML, CSS, and JavaScript.</p>
+      </div>
+
+      
+      <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px black; width: 280px;">
+        <h3 style="font-size: 22px; color: black">Mobile-Friendly Design</h3>
+        <p style="font-size: 16px; color: black">Your website will look and work perfectly on phones, tablets, and desktops.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+  <section id="portfolio" class="section portfolio-section">
+  <div class="container">
+    <h2>My Work</h2>
+    <div class="portfolio-grid">
+      <div class="project-card">
+        <a href="#contact" class="btn"><img src="project 1.png" alt="Project 1"></a>
+        <h3>Landing Page</h3>
+        <p>A clean and responsive landing page built with HTML & CSS.</p>
+      </div>
+      <div class="project-card">
+       <a href="#contact" class="btn"><img src="project 2.png" alt="Project 1"></a>
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio site showcasing web design and dev skills.</p>
+      </div>
+      <div class="project-card">
+        <a href="#contact" class="btn"><img src="project 3.png" alt="Project 1"></a>
+        <h3>Booking Form</h3>
+        <p>A form with validation and alert using JavaScript.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  
+  if (!name || !email || !message) {
+    alert("⚠️ Please fill in all fields before sending.");
+    return;
+  }
+
+  const phoneNumber = "2347072913967"; 
+
+  const whatsappMessage = `Hello, my name is ${name}.\nEmail: ${email}\nMessage: ${message}`;
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+  window.open(url, '_blank'); 
+
+  document.getElementById('contactForm').reset(); 
+});
+</script>
+
+</body>
+</html>
